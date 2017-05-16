@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>2017-5-6数据库个人的归纳 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="数据库的基础命令mysql数据库的默认编是Latin1如果在创建数据库忘记指定字符，可以通过下面的方法修改1。修改数据库python的字符集alter database python charset utf8….2.修改表的字符集，以及所有字符列（char,varchar,text等)的字符集为utf8alter table student convert to charset utf8… 基础的">
+<meta name="keywords" content="新建,模板,小书匠">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2017-5-6数据库个人的归纳">
+<meta property="og:url" content="http://yoursite.com/2017/05/09/数据库的操作/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="数据库的基础命令mysql数据库的默认编是Latin1如果在创建数据库忘记指定字符，可以通过下面的方法修改1。修改数据库python的字符集alter database python charset utf8….2.修改表的字符集，以及所有字符列（char,varchar,text等)的字符集为utf8alter table student convert to charset utf8… 基础的">
+<meta property="og:updated_time" content="2017-05-16T13:57:54.629Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="2017-5-6数据库个人的归纳">
+<meta name="twitter:description" content="数据库的基础命令mysql数据库的默认编是Latin1如果在创建数据库忘记指定字符，可以通过下面的方法修改1。修改数据库python的字符集alter database python charset utf8….2.修改表的字符集，以及所有字符列（char,varchar,text等)的字符集为utf8alter table student convert to charset utf8… 基础的">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -149,74 +154,85 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-数据库的操作" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/16/python的知识点/" class="archive-article-date">
-  	<time datetime="2017-05-16T06:10:12.262Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-16</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/16/python的知识点/">2017-5-6python知识点。</a>
+    <h1 class="article-title" itemprop="name">
+      2017-5-6数据库个人的归纳
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">新建,模板,小书匠</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/09/数据库的操作/" class="archive-article-date">
+        
+        <a href="/2017/05/09/数据库的操作/" class="archive-article-date">
   	<time datetime="2017-05-09T14:01:52.860Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-09</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/09/数据库的操作/">2017-5-6数据库个人的归纳</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="数据库的基础命令"><a href="#数据库的基础命令" class="headerlink" title="数据库的基础命令"></a>数据库的基础命令</h3><p><strong>mysql数据库的默认编是Latin1</strong><br><em>如果在创建数据库忘记指定字符，可以通过下面的方法修改</em><br>1。修改数据库python的字符集<br>alter database python charset utf8….<br>2.修改表的字符集，以及所有字符列（char,varchar,text等)的字符集为utf8<br>alter table student convert to charset utf8…</p>
+<p>基础的操作命令：<br>1，create database python #创建数据库；<br>2，create table t_student #创建表；<br>数据库和表的增删的修改的操作，<br>drop database python #删除数据库<br>drop table student　＃删除表</p>
+<h4 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h4><p>在查询两个或多个表的里值得时候，需要用到内连接的，内连接是建立在两个表有一定的关系值得时候建立联系，</p>
+<p>** 非关系数据库redis</p>
+<ul>
+<li>redis是免费开源的，使用C语言编写的，支持网络，</li>
+<li>基于内存（磁盘）亦可持久化的存储的key.value的内存数据库，</li>
+<li>可缓存和消息中间事件。<br>…</li>
+</ul>
+<p>…</p>
+<h3 id="redis-的优点"><a href="#redis-的优点" class="headerlink" title="redis 的优点"></a>redis 的优点</h3><p>1.读写速度快，读11000/s 写8000/s<br>2.丰富的数据类型 支持五种类型的数据类型，string字符串，ｈａｓｈ哈希类型，list链表，set 集合类型,zset(sortedset–有序集合类型)<br>3.原子性，redis的所有操作都是原子 ，一个事物是不可分割的最小的工作单位，要么都做要么都不做，这与事物处理是的单线程处理机制。</p>
+<h3 id="redis-事物"><a href="#redis-事物" class="headerlink" title="redis 事物"></a>redis 事物</h3><p>…<br>事物有连个特性<br>1.事物是一个单独隔离的操作：事物中所有的命令都会系列化，按顺序的执行。事物在执行的过程中，不会被其他客户端发送来的请求所打断，<br>2.redis事物都是原子性的，原子意味着要么所有的命令都执行，要么都不执行；<br>一个事物从开始到结束会经历以下三个阶段：<br>开始事物 muti<br>命令入队列 QUEUED<br>执行事务 EXEC </p>
+<p>事物不会影响在开始事物的对象进行修改，不会阻塞对象其他的操作。。</p>
+<h3 id="redis-与python的交互，管道StrictRedis-Pipeline-的调用方法"><a href="#redis-与python的交互，管道StrictRedis-Pipeline-的调用方法" class="headerlink" title="redis 与python的交互，管道StrictRedis.Pipeline()的调用方法"></a>redis 与python的交互，管道StrictRedis.Pipeline()的调用方法</h3><h4 id="redis-与python的交互，"><a href="#redis-与python的交互，" class="headerlink" title="redis 与python的交互，"></a>redis 与python的交互，</h4><p>…..<br>直接调用redis里面StrictRedis()的属性生成一个交互的对象的，<br>通过对象直接在的继承的属性，直接操作redis里面的命令的<br>对redis数据库进行操作de<br>………………………………………..</p>
+<h4 id="管道StrictRedis-Pipeline-的调用方法。。。"><a href="#管道StrictRedis-Pipeline-的调用方法。。。" class="headerlink" title="管道StrictRedis.Pipeline()的调用方法。。。"></a>管道StrictRedis.Pipeline()的调用方法。。。</h4><p>#coding=utf-8<br>  2 import redis<br>  3<br>  4 def main():<br>  5     try:<br>  6         # 通过这种方法可以创建远程连接的,通过调用redis里面的StrictRedis的方法<br>  7         # 创造python与redis的交互的对象，对象的操作与redis里面的键值对的操作是一样的<br>  8         redis_cli = redis.StrictRedis(host=”localhost”, port=6379, db=0)<br>  9         # 本地连接可以用这种方法建立连接的<br> 10         # redis_cli = redis.StrictRedis()<br> 11         # 通过Pipeline管道来在本地存储多个命令的操作，这些命令不是立即向服务器立即执行                的<br> 12         # 而是需要通过调用excute的方法将这些命令一起发给服务器，这样看可以减少服务器与本地的<br> 13         # 交互，加快执行的速度。而没到命令就会返回一个元素的结果，所有execute（）会返回多个值。</p>
+<h4 id=""><a href="#" class="headerlink" title=" "></a> </h4><pre><code>    df main():
+       try：
+        redis_cli = redisStrictRedis()
+        pipe_line = redis_cli.pipeline()
+        pipe_line.set(&quot;晓晴&quot;, &quot;18&quot;)
+        pipe_line.set(&quot;小高&quot;,&quot;19&quot;)
+        pipe_line.lpush(&quot;list5&quot;,&quot;12&quot;,&quot;13&quot;,&quot;14&quot;)
+        pipe_line.keys()
+        result = pipe_line.execute()
+        for item in result:
+            print item
+        except Exception as e:
+            print e
+if __name__ == &quot;__main__&quot;:
+                       main()
+</code></pre>
+      
 
-        <div class="article-info info-on-right">
-          
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -228,84 +244,98 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/05/09/数据库的操作/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/07/前端复习/" class="archive-article-date">
-  	<time datetime="2017-05-07T06:46:02.765Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-07</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/07/前端复习/">2017-5-6 表格</a>
-    </h1>
+    <a href="/2017/05/16/python的知识点/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          2017-5-6python知识点。
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/05/07/前端复习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2017-5-6 表格</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">新建,模板,小书匠</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/29/hello-world/" class="archive-article-date">
-  	<time datetime="2017-04-29T03:41:59.432Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/29/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -328,8 +358,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

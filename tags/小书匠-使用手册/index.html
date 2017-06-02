@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>Tag: 小书匠,使用手册 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/小书匠-使用手册/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
@@ -151,59 +151,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-django-web框架" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/05/21/django-web框架/" class="archive-article-date">
+  	<time datetime="2017-05-21T05:54:13.015Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-21</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/21/django-web框架/">2017-5-21 django-web框架</a>
+      <a class="archive-article-title" href="/2017/05/21/django-web框架/">2017-5-21 django-web框架</a>
     </h1>
   
 
-        
-        <a href="/2017/05/21/django-web框架/" class="archive-article-date">
-  	<time datetime="2017-05-21T05:54:13.015Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="搭建的操作命令"><a href="#搭建的操作命令" class="headerlink" title="搭建的操作命令"></a>搭建的操作命令</h3><p>…<br>1.创建项目<br>django-admin startproject 项目名称<br>2.添加应用<br>python manage.py startapp bootest<br>3.在settings.py的配置文件里安装应用<br>在 INSTALLED_APPS(,,’booktest’)<br>4.同时需要将里面的语言切换为中文<br>即 LANGUAGE_CODE = ‘zh-Hans’<br>TIME_ZONE = ‘Asia/Shanghai’<br>5.启动简单的开发django的Web服务器<br>python mange.py runserver<br>6.指定数据库额，如果没定义数据库，就会默认使用项目目录下面的sqlite3的数据库<br>DATABASES = {<br>    ‘default’: {<br>        ‘ENGINE’: ‘django.db.backends.mysql’,<br>        ‘NAME’: ‘db_test’,<br>        ‘USER’: ‘root’,<br>        ‘PASSWORD’: ‘mysql’,<br>        ‘HOST’: ‘localhost’,<br>        ‘PORT’: ‘3306’,<br>    }<br>}<br>6，在booktest文件夹下面的models文件里面创建类定义模型，也就是数据库里面的表<br>模型类是Python面向对象的程序，Python语言面向对象的程序一切皆对象，通过ORM的系统建立程序对象和数据库的映射关系，主要实现程序对象到关系数据库数据的对象映射。用python的程序语言直接操作数据库，避免了复杂的SQL语句，缺点是牺牲性能的，<br>7.创建好模型后，将文件迁移，将文件迁移为创建表的语句，<br>分为两步，一，生成迁移文件，python manage.py makemigrations<br>二， 执行迁移文件，python manage.py migrate</p>
-<p>7,定义视图文件，在booktestm目录下views文件里定义，<br>.视图就是一个python函数，被定义在views.py的文件里.<br>.视图的第一个参数就是HttpReuest类型的对象的request,包含了所有的请求信息，<br>.视图必须返回HttpReuest对象，包含返回给响应者的所有信息。<br>调用模板分为三步骤都封装在render的函数里面的<br>1.找到模板<br>2.定义上下文<br>3.渲染模板<br>4.视图调用模板都要执行以上三部分，于是Django提供了一个函数render封装了以上代码<br>方法render包含3个参数<br>第一个参数为request对象<br>第二个参数为模板文件路径<br>第三个参数为字典，表示向模板中传递的上下文数据<br>打开booktst/views.py文件，调用render的代码如下</p>
-<p>#coding:utf-8</p>
-<p>from django.shortcuts import render</p>
-<p>def index(request):<br>    context={‘title’:’图书列表’,’list’:range(10)}<br>    return render(request,’booktest/index.html’,context)</p>
-<p>8.视图定义好后，就可以配置URLconf<br>.请求者在浏览器的地址栏输入url,请求到网站后，获取url的信息,然后配置好路径逐条匹配，<br>如果匹配成功就调用相应的视图，<br>一条URLconf包括url规则、视图两部分<br>url规则使用正则表达式定义<br>视图就是在views.py中定义的视图<br>需要两步完成URLconf配置<br>1.在应用中定义URLconf<br>2.包含到项目的URLconf中</p>
-<p>9.在浏览器地址栏输入地址请求访问。<br>…</p>
-<h3 id="查询集"><a href="#查询集" class="headerlink" title="查询集"></a>查询集</h3><h5 id="查询集的两大特性：一，惰性执行：创建查询集不会访问数据库，知道调用数据库是才会访问数据库的，调用数据的情况包括迭代、序列化、与if合用"><a href="#查询集的两大特性：一，惰性执行：创建查询集不会访问数据库，知道调用数据库是才会访问数据库的，调用数据的情况包括迭代、序列化、与if合用" class="headerlink" title="查询集的两大特性：一，惰性执行：创建查询集不会访问数据库，知道调用数据库是才会访问数据库的，调用数据的情况包括迭代、序列化、与if合用"></a>查询集的两大特性：一，惰性执行：创建查询集不会访问数据库，知道调用数据库是才会访问数据库的，调用数据的情况包括迭代、序列化、与if合用</h5><h5 id="缓存查询集的结果会被缓存的。"><a href="#缓存查询集的结果会被缓存的。" class="headerlink" title="缓存查询集的结果会被缓存的。"></a>缓存查询集的结果会被缓存的。</h5><h5 id="返回列表的过滤器如下"><a href="#返回列表的过滤器如下" class="headerlink" title="返回列表的过滤器如下"></a>返回列表的过滤器如下</h5><p>all()：返回所有的数据<br>filter():返回满足条件的数据<br>excude():返回满足条件之外的数据<br>order_by():排序</p>
-<h5 id="返回单个的过滤器如下"><a href="#返回单个的过滤器如下" class="headerlink" title="返回单个的过滤器如下"></a>返回单个的过滤器如下</h5><p>get(): 获取单个满足条件的对象，未找到或找到多条都会报异常的。。<br>count():返回当前查询的总数<br>aggregate():聚合<br>exists():判断查询集中是否有数据，如果有则返回Ture,没有则返回Fasle;</p>
-<ul>
-<li>范围查询filter(id__in=[1,2,3])</li>
-<li>比较运算符的filter(id__gt=3)id大于三的对象</li>
-<li>gte,大于或等于，gt,大于，lt小于,lte,小于或等于</li>
-<li>模糊查询的filter（btitle__contains=”传”）查询包含传的对象</li>
-<li>startswith,对象以什么开头，结尾endswith,</li>
-<li>逻辑运算符Q,同sql语句中的where和and的关键字</li>
-<li>from django.db.models import Q 中导入过来，之后，booklist= BookInfo.books.filter(Q(bread_gt=20) | Q(bcommet_lt=30))查询阅读量大于而是或订阅量小于三十的书</li>
-<li>可以用|和&amp;结合使用的，|表示或的关系，只有通过这种方式来实现的，而&amp;表示并的关系，但直接在filter（bread_gt=20,bread_lt=30）中更加简单的。</li>
-<li>Q对象也可以使用前结合~来使用表示not等同于excude()的用法，</li>
-<li>list= BookInfo.books.fliter(~Qid=3)编号不为三的图书。</li>
-</ul>
-<h4 id="聚合函数agrregate"><a href="#聚合函数agrregate" class="headerlink" title="聚合函数agrregate"></a>聚合函数agrregate</h4><p>使用aggregate过滤器调用聚合函数Avg,Count,MIn,Sum,被定义django.db.models之中的<br>查询书阅读量总数量，<br>from django.db.models import Sum<br>list = BookInfo.books.aggreate(Sum(‘bread’))</p>
-<p>使用count时一般不使用aggregate()过滤器<br>例：查询图书总数<br>list = BookInfo.books.count()</p>
-<h4 id="F对象的使用"><a href="#F对象的使用" class="headerlink" title="F对象的使用"></a>F对象的使用</h4><p>F对象通常是用在两个对象的属性及字段之间的常量值之间的比较from django.db.models import F列如查询阅读量评论量的书籍：boolist =  BookInfo.books.filter(bread<strong>gt=F(‘bcommet))<br>也可以通过算数运算；boolist=BookInfo.books.filter(bread</strong>gt=F(‘bcommet)*2)</p>
-<h4 id="关联查询"><a href="#关联查询" class="headerlink" title="关联查询"></a>关联查询</h4><p>查询英雄里面内容含有八的图书<br>booklist = Bookinfo.books..filter(heroinfo<strong>hcontent</strong>contains=”八”)<br>查询天龙八部里的英雄的<br>booklist = Heroinfo.books.filter(bookinfo__btitle=”天龙八部”)</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -215,385 +190,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/21/django-web框架/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-
-
-
   
-    <article id="post-python的知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/16/python的知识点/">2017-5-6python知识点。</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/16/python的知识点/" class="archive-article-date">
-  	<time datetime="2017-05-16T06:10:12.262Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="python的工厂模式"><a href="#python的工厂模式" class="headerlink" title="python的工厂模式"></a>python的工厂模式</h2><p>…<br>如果用类来创建简单的工厂模式，是根据类的继承的原理，可以将一个类的相同属性和方法，用<br>父类封装起来，不同的地方父类可以定义一个方法，但不执行只是占一个位置，而是通过子类的重写去创创建子类所需要的功能，父类就相当一个简单工厂模型，而具体的创造是在子类里面完成的，例如，，</p>
-<p>…</p>
-<h5 id="定义一个基本的4S店类"><a href="#定义一个基本的4S店类" class="headerlink" title="定义一个基本的4S店类"></a>定义一个基本的4S店类</h5><p>class CarStore(object):</p>
-<pre><code>#仅仅是定义了有这个方法，并没有实现，具体功能，这个需要在子类中实现
-def createCar(self, typeName):
-    pass
-
-def order(self, typeName):
-    # 让工厂根据类型，生产一辆汽车
-    self.car = self.createCar(typeName)
-    self.car.move()
-    self.car.stop()
-</code></pre><h5 id="定义一个北京现代4S店类"><a href="#定义一个北京现代4S店类" class="headerlink" title="定义一个北京现代4S店类"></a>定义一个北京现代4S店类</h5><pre><code>class XiandaiCarStore(CarStore):
-
-    def createCar(self, typeName):
-        self.carFactory = CarFactory()
-        return self.carFactory.createCar(typeName)
-</code></pre><h5 id="定义伊兰特车类"><a href="#定义伊兰特车类" class="headerlink" title="定义伊兰特车类"></a>定义伊兰特车类</h5><p>class YilanteCar(object):</p>
-<pre><code># 定义车的方法
-def move(self):
-    print(&quot;---车在移动---&quot;)
-
-def stop(self):
-    print(&quot;---停车---&quot;)
-</code></pre><h5 id="定义索纳塔车类"><a href="#定义索纳塔车类" class="headerlink" title="定义索纳塔车类"></a>定义索纳塔车类</h5><p>class SuonataCar(object):</p>
-<pre><code># 定义车的方法
-def move(self):
-    print(&quot;---车在移动---&quot;)
-
-def stop(self):
-    print(&quot;---停车---&quot;)
-</code></pre><h5 id="定义一个生产汽车的工厂，让其根据具体得订单生产车"><a href="#定义一个生产汽车的工厂，让其根据具体得订单生产车" class="headerlink" title="定义一个生产汽车的工厂，让其根据具体得订单生产车"></a>定义一个生产汽车的工厂，让其根据具体得订单生产车</h5><p>class CarFactory(object):</p>
-<pre><code>def createCar(self,typeName):
-    self.typeName = typeName
-    if self.typeName == &quot;伊兰特&quot;:
-        self.car = YilanteCar()
-    elif self.typeName == &quot;索纳塔&quot;:
-        self.car = SuonataCar()
-
-    return self.car
-</code></pre><p>suonata = XiandaiCarStore()<br>suonata.order(“索纳塔”)</p>
-<h5 id="同样也可用函数的嵌入调用去完成的。"><a href="#同样也可用函数的嵌入调用去完成的。" class="headerlink" title="同样也可用函数的嵌入调用去完成的。"></a>同样也可用函数的嵌入调用去完成的。</h5><p>…</p>
-<h1 id="new方法"><a href="#new方法" class="headerlink" title="new方法"></a><strong>new</strong>方法</h1><h5 id="new方法的简单慨述-class-A-object"><a href="#new方法的简单慨述-class-A-object" class="headerlink" title="new方法的简单慨述 class A(object):"></a>new方法的简单慨述 class A(object):</h5><p>  2     # 此时init方法做一些初始化的更能<br>  3     def <strong>init</strong>(self):<br>  4         print(id(self))<br>  5         print(“这是init方法”)<br>  6     # 此时的cls是类方法的膜版,因为new方法要在init方法之前生成一个对象<br>  7     def <strong>new</strong>(cls):<br>  8         print(id(id))<br>  9<br> 10         print(“这是new方法”)<br> 11         ‘’’  当调用new方法的时候，需要生成一个A类的实例对象，而A类的<strong>new</strong>方法<br>                  不具备生成一个实例对象的更能，所以子类就会去父类里面找，所以就通过调用父类<br>                 的new方法来生成一个实例对象，而此时需要将A模板作为参数传输到父类的new方法<br>                 中，生成一个对象之后，会方会给init的方法做一些初始化功能的，</p>
-<p> 14         return object._new__(cls)<br> 15<br> 16 print(id(A))<br> 17 dog = A()</p>
-<h4 id="new是ong在单列模式中可以被用到的，单例模式即只生成一个实例对象的类，，，"><a href="#new是ong在单列模式中可以被用到的，单例模式即只生成一个实例对象的类，，，" class="headerlink" title="new是ong在单列模式中可以被用到的，单例模式即只生成一个实例对象的类，，，"></a><strong>new</strong>是ong在单列模式中可以被用到的，单例模式即只生成一个实例对象的类，，，</h4><h1 id="异常的一些常规操作"><a href="#异常的一些常规操作" class="headerlink" title="异常的一些常规操作"></a>异常的一些常规操作</h1><ul>
-<li>异常的捕捉<br>异常指的是一段程序出现错误，就会产生错误提示，阻止程序的整体的运行，因此可以用到<br>try来捕捉异常，并作出处理，这样即使出现异常也不会影响整体的操作，只会在局部异常后面的<br>形成阻塞，同时也可以做一个局部的检测，<br>except Exception as result:<br>  return (“捕捉到的异常%s” %result)<br>else:<br>  (“没有捕捉异常”)<br>finally:<br>  不管没有异常都要操作的，</li>
-</ul>
-<h1 id="抛出自定义的异常"><a href="#抛出自定义的异常" class="headerlink" title="抛出自定义的异常"></a>抛出自定义的异常</h1><p>你可以用raise语句来引发一个异常。异常/错误对象必须有一个名字，且它们应是Error或Exception类的子类</p>
-<p>下面是一个引发异常的例子:</p>
-<p>class ShortInputException(Exception):<br>    ‘’’自定义的异常类’’’<br>    def <strong>init</strong>(self, length, atleast):</p>
-<pre><code>#super().__init__()
-self.length = length
-self.atleast = atleast
-</code></pre><p>def main():<br>    try:<br>        s = input(‘请输入 –&gt; ‘)<br>        if len(s) &lt; 3:</p>
-<pre><code>        # raise引发一个你定义的异常
-        raise ShortInputException(len(s), 3)
-except ShortInputException as result:#x这个变量被绑定到了错误的实例
-    print(&apos;ShortInputException: 输入的长度是 %d,长度至少应是 %d&apos;% (result.length, result.atleast))
-else:
-    print(&apos;没有异常发生.&apos;)
-</code></pre><p>raise 抛出异常，在记载异常信息可以用到的，<br>自定义异常就是，用Exception为父类创建一个类就是一个异常的类，定义一个对象就是一个异常，而异常的名字就是类名的。。直接用raise抛出。。。<br>非定义异常如果直接抛出，只需raise就行了。。。。</p>
-<h1 id="模块中的方法"><a href="#模块中的方法" class="headerlink" title="模块中的方法"></a>模块中的方法</h1><p><strong>name</strong> 如果是自己打开这个文件，name就等于<strong>main</strong>，如果是别人导包的话，等于文件名的前缀，<br><strong>all</strong> 用于from XX import * 的时候的 一些限定操作的，<strong>all</strong> = [“test”,”port”]<br>只导入了 中括号里面的。</p>
-<h3 id="字符串的操作"><a href="#字符串的操作" class="headerlink" title="字符串的操作"></a>字符串的操作</h3><p>##### </p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">新建,模板,小书匠</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/16/python的知识点/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-数据库的操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/09/数据库的操作/">2017-5-6数据库个人的归纳</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/09/数据库的操作/" class="archive-article-date">
-  	<time datetime="2017-05-09T14:01:52.860Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="数据库的基础命令"><a href="#数据库的基础命令" class="headerlink" title="数据库的基础命令"></a>数据库的基础命令</h3><p><strong>mysql数据库的默认编是Latin1</strong><br><em>如果在创建数据库忘记指定字符，可以通过下面的方法修改</em><br>1。修改数据库python的字符集<br>alter database python charset utf8….<br>2.修改表的字符集，以及所有字符列（char,varchar,text等)的字符集为utf8<br>alter table student convert to charset utf8…</p>
-<p>基础的操作命令：<br>1，create database python #创建数据库；<br>2，create table t_student #创建表；<br>数据库和表的增删的修改的操作，<br>drop database python #删除数据库<br>drop table student　＃删除表</p>
-<h4 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h4><p>在查询两个或多个表的里值得时候，需要用到内连接的，内连接是建立在两个表有一定的关系值得时候建立联系，</p>
-<p>** 非关系数据库redis</p>
-<ul>
-<li>redis是免费开源的，使用C语言编写的，支持网络，</li>
-<li>基于内存（磁盘）亦可持久化的存储的key.value的内存数据库，</li>
-<li>可缓存和消息中间事件。<br>…</li>
-</ul>
-<p>…</p>
-<h3 id="redis-的优点"><a href="#redis-的优点" class="headerlink" title="redis 的优点"></a>redis 的优点</h3><p>1.读写速度快，读11000/s 写8000/s<br>2.丰富的数据类型 支持五种类型的数据类型，string字符串，ｈａｓｈ哈希类型，list链表，set 集合类型,zset(sortedset–有序集合类型)<br>3.原子性，redis的所有操作都是原子 ，一个事物是不可分割的最小的工作单位，要么都做要么都不做，这与事物处理是的单线程处理机制。</p>
-<h3 id="redis-事物"><a href="#redis-事物" class="headerlink" title="redis 事物"></a>redis 事物</h3><p>…<br>事物有连个特性<br>1.事物是一个单独隔离的操作：事物中所有的命令都会系列化，按顺序的执行。事物在执行的过程中，不会被其他客户端发送来的请求所打断，<br>2.redis事物都是原子性的，原子意味着要么所有的命令都执行，要么都不执行；<br>一个事物从开始到结束会经历以下三个阶段：<br>开始事物 muti<br>命令入队列 QUEUED<br>执行事务 EXEC </p>
-<p>事物不会影响在开始事物的对象进行修改，不会阻塞对象其他的操作。。</p>
-<h3 id="redis-与python的交互，管道StrictRedis-Pipeline-的调用方法"><a href="#redis-与python的交互，管道StrictRedis-Pipeline-的调用方法" class="headerlink" title="redis 与python的交互，管道StrictRedis.Pipeline()的调用方法"></a>redis 与python的交互，管道StrictRedis.Pipeline()的调用方法</h3><h4 id="redis-与python的交互，"><a href="#redis-与python的交互，" class="headerlink" title="redis 与python的交互，"></a>redis 与python的交互，</h4><p>…..<br>直接调用redis里面StrictRedis()的属性生成一个交互的对象的，<br>通过对象直接在的继承的属性，直接操作redis里面的命令的<br>对redis数据库进行操作de<br>………………………………………..</p>
-<h4 id="管道StrictRedis-Pipeline-的调用方法。。。"><a href="#管道StrictRedis-Pipeline-的调用方法。。。" class="headerlink" title="管道StrictRedis.Pipeline()的调用方法。。。"></a>管道StrictRedis.Pipeline()的调用方法。。。</h4><p>#coding=utf-8<br>  2 import redis<br>  3<br>  4 def main():<br>  5     try:<br>  6         # 通过这种方法可以创建远程连接的,通过调用redis里面的StrictRedis的方法<br>  7         # 创造python与redis的交互的对象，对象的操作与redis里面的键值对的操作是一样的<br>  8         redis_cli = redis.StrictRedis(host=”localhost”, port=6379, db=0)<br>  9         # 本地连接可以用这种方法建立连接的<br> 10         # redis_cli = redis.StrictRedis()<br> 11         # 通过Pipeline管道来在本地存储多个命令的操作，这些命令不是立即向服务器立即执行                的<br> 12         # 而是需要通过调用excute的方法将这些命令一起发给服务器，这样看可以减少服务器与本地的<br> 13         # 交互，加快执行的速度。而没到命令就会返回一个元素的结果，所有execute（）会返回多个值。</p>
-<h4 id=""><a href="#" class="headerlink" title=" "></a> </h4><pre><code>    df main():
-       try：
-        redis_cli = redisStrictRedis()
-        pipe_line = redis_cli.pipeline()
-        pipe_line.set(&quot;晓晴&quot;, &quot;18&quot;)
-        pipe_line.set(&quot;小高&quot;,&quot;19&quot;)
-        pipe_line.lpush(&quot;list5&quot;,&quot;12&quot;,&quot;13&quot;,&quot;14&quot;)
-        pipe_line.keys()
-        result = pipe_line.execute()
-        for item in result:
-            print item
-        except Exception as e:
-            print e
-if __name__ == &quot;__main__&quot;:
-                       main()
-</code></pre><p>  ……….</p>
-<h2 id="mongodb数据的小总节"><a href="#mongodb数据的小总节" class="headerlink" title="mongodb数据的小总节"></a>mongodb数据的小总节</h2><p>  …..</p>
-<h3 id="mongod的数据的操作命令"><a href="#mongod的数据的操作命令" class="headerlink" title="mongod的数据的操作命令"></a>mongod的数据的操作命令</h3><p>  建立新集合db.createCollection(“new”)<br>  删除新集合db.new.drop()</p>
-<h4 id="insert-插入文档，不能在已有id上插入"><a href="#insert-插入文档，不能在已有id上插入" class="headerlink" title="insert 插入文档，不能在已有id上插入"></a>insert 插入文档，不能在已有id上插入</h4><p>  db.new.insert({-id:1,name:”刘备”,age:18})</p>
-<h4 id="save-相当插入文档，但可以在已有的id上插入"><a href="#save-相当插入文档，但可以在已有的id上插入" class="headerlink" title="save 相当插入文档，但可以在已有的id上插入"></a>save 相当插入文档，但可以在已有的id上插入</h4><p>  db.new.save({-id:1,name:”刘备”,age:18})<br>  (-id下划线id,如果自己不创建系统就会默认给分配一个，相当于主键，具有唯一性的)</p>
-<h4 id="update-数据修改的一些操作"><a href="#update-数据修改的一些操作" class="headerlink" title="update 数据修改的一些操作"></a>update 数据修改的一些操作</h4><p>  db.new.update({name:1},{name:”曹操”})<br>  db.new.update({name:3},{$set:{name:”赵子龙”}})<br>  db.new.update({},{$set:{gender:”true”}},{multi:true})</p>
-<h4 id="逻辑运算符的运用"><a href="#逻辑运算符的运用" class="headerlink" title="逻辑运算符的运用"></a>逻辑运算符的运用</h4><p>   db.new.update({name:{$in:[4,5,6]}},{$set:{“gender”:”False”}},{multi:true})<br>      db.new.update({$or:[{gender:”False”},{name:”赵子龙”}]},{$set:{name:”赵子龙”}},{multi:true})</p>
-<h4 id="find-查找文档的方法"><a href="#find-查找文档的方法" class="headerlink" title="find 查找文档的方法"></a>find 查找文档的方法</h4><p>  db.new.find({name:”刘备”},{})  </p>
-<h4 id="多个数据文档的建立"><a href="#多个数据文档的建立" class="headerlink" title="多个数据文档的建立"></a>多个数据文档的建立</h4><p>  for (i=0;i&lt;15;i++) {db.new.insert({_id:i,name:i+1})}</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">新建,模板,小书匠</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/09/数据库的操作/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-前端复习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/07/前端复习/">2017-5-6 表格</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/07/前端复习/" class="archive-article-date">
-  	<time datetime="2017-05-07T06:46:02.765Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="前端的知识点"><a href="#前端的知识点" class="headerlink" title="前端的知识点"></a>前端的知识点</h1><p>数据计算机 待机时间啊<br>display属性<br>display属性是用来设置元素的类型及隐藏的，常用的属性有：<br>1、none 元素隐藏且不占位置<br>2、block 元素以块元素显示<br>3、inline 元素以内联元素显示<br>4、inline-block 元素以内联块元素显示</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;盒子的真实尺寸&lt;/title&gt;
-    &lt;style type=&quot;text/css&quot;&gt;
-        .box01{width:50px;height:50px;background-color:gold;}
-        .box02{width:50px;height:50px;background-color:gold;border:50px
-         solid #000}
-        .box03{width:50px;height:50px;background-color:gold;border:50px
-         solid #000;padding: 50px;}
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div class=&quot;box01&quot;&gt;1&lt;/div&gt;
-    &lt;br /&gt;
-    &lt;div class=&quot;box02&quot;&gt;2&lt;/div&gt;
-    &lt;br /&gt;
-    &lt;div class=&quot;box03&quot;&gt;3&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><p>  ＃＃　<br>            &lt;!DOCTYPE html&gt;<br>          <html lang="en"><br>          <head><br>              <meta charset="UTF-8"><br>              <title> 图片标题 </title><br>          </head><br>          <body><br>              <img src="002.jpg" alt="水果图片">时<br>              <img src="003-02.gif" alt="动态图片"></body></html></p>
-<pre><code>&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><p>  　
-    　</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">新建,模板,小书匠</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/07/前端复习/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/29/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/29/hello-world/" class="archive-article-date">
-  	<time datetime="2017-04-29T03:41:59.432Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/29/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-  
 
 
           </div>
@@ -615,10 +224,10 @@ if __name__ == &quot;__main__&quot;:
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",

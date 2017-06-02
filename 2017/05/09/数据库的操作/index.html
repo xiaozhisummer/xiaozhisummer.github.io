@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/09/数据库的操作/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="数据库的基础命令mysql数据库的默认编是Latin1如果在创建数据库忘记指定字符，可以通过下面的方法修改1。修改数据库python的字符集alter database python charset utf8….2.修改表的字符集，以及所有字符列（char,varchar,text等)的字符集为utf8alter table student convert to charset utf8… 基础的">
-<meta property="og:updated_time" content="2017-05-16T13:57:54.629Z">
+<meta property="og:updated_time" content="2017-05-17T17:35:20.500Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2017-5-6数据库个人的归纳">
 <meta name="twitter:description" content="数据库的基础命令mysql数据库的默认编是Latin1如果在创建数据库忘记指定字符，可以通过下面的方法修改1。修改数据库python的字符集alter database python charset utf8….2.修改表的字符集，以及所有字符列（char,varchar,text等)的字符集为utf8alter table student convert to charset utf8… 基础的">
@@ -204,7 +204,16 @@
             print e
 if __name__ == &quot;__main__&quot;:
                        main()
-</code></pre>
+</code></pre><p>  ……….</p>
+<h2 id="mongodb数据的小总节"><a href="#mongodb数据的小总节" class="headerlink" title="mongodb数据的小总节"></a>mongodb数据的小总节</h2><p>  …..</p>
+<h3 id="mongod的数据的操作命令"><a href="#mongod的数据的操作命令" class="headerlink" title="mongod的数据的操作命令"></a>mongod的数据的操作命令</h3><p>  建立新集合db.createCollection(“new”)<br>  删除新集合db.new.drop()</p>
+<h4 id="insert-插入文档，不能在已有id上插入"><a href="#insert-插入文档，不能在已有id上插入" class="headerlink" title="insert 插入文档，不能在已有id上插入"></a>insert 插入文档，不能在已有id上插入</h4><p>  db.new.insert({-id:1,name:”刘备”,age:18})</p>
+<h4 id="save-相当插入文档，但可以在已有的id上插入"><a href="#save-相当插入文档，但可以在已有的id上插入" class="headerlink" title="save 相当插入文档，但可以在已有的id上插入"></a>save 相当插入文档，但可以在已有的id上插入</h4><p>  db.new.save({-id:1,name:”刘备”,age:18})<br>  (-id下划线id,如果自己不创建系统就会默认给分配一个，相当于主键，具有唯一性的)</p>
+<h4 id="update-数据修改的一些操作"><a href="#update-数据修改的一些操作" class="headerlink" title="update 数据修改的一些操作"></a>update 数据修改的一些操作</h4><p>  db.new.update({name:1},{name:”曹操”})<br>  db.new.update({name:3},{$set:{name:”赵子龙”}})<br>  db.new.update({},{$set:{gender:”true”}},{multi:true})</p>
+<h4 id="逻辑运算符的运用"><a href="#逻辑运算符的运用" class="headerlink" title="逻辑运算符的运用"></a>逻辑运算符的运用</h4><p>   db.new.update({name:{$in:[4,5,6]}},{$set:{“gender”:”False”}},{multi:true})<br>      db.new.update({$or:[{gender:”False”},{name:”赵子龙”}]},{$set:{name:”赵子龙”}},{multi:true})</p>
+<h4 id="find-查找文档的方法"><a href="#find-查找文档的方法" class="headerlink" title="find 查找文档的方法"></a>find 查找文档的方法</h4><p>  db.new.find({name:”刘备”},{})  </p>
+<h4 id="多个数据文档的建立"><a href="#多个数据文档的建立" class="headerlink" title="多个数据文档的建立"></a>多个数据文档的建立</h4><p>  for (i=0;i&lt;15;i++) {db.new.insert({_id:i,name:i+1})}</p>
+
       
 
       
@@ -428,6 +437,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">新建,模板,小书匠</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小书匠,使用手册</a>
               </li>
             
             <div class="clearfix"></div>

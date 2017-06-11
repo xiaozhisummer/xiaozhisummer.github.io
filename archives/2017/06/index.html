@@ -6,19 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>2017-5-21 django-web框架 | Hexo</title>
+  <title>Archives: 2017/6 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="搭建的操作命令…1.创建项目django-admin startproject 项目名称2.添加应用python manage.py startapp bootest3.在settings.py的配置文件里安装应用在 INSTALLED_APPS(,,’booktest’)4.同时需要将里面的语言切换为中文即 LANGUAGE_CODE = ‘zh-Hans’TIME_ZONE = ‘Asia/S">
-<meta name="keywords" content="小书匠,使用手册">
-<meta property="og:type" content="article">
-<meta property="og:title" content="2017-5-21 django-web框架">
-<meta property="og:url" content="http://yoursite.com/2017/05/21/django-web框架/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/archives/2017/06/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="搭建的操作命令…1.创建项目django-admin startproject 项目名称2.添加应用python manage.py startapp bootest3.在settings.py的配置文件里安装应用在 INSTALLED_APPS(,,’booktest’)4.同时需要将里面的语言切换为中文即 LANGUAGE_CODE = ‘zh-Hans’TIME_ZONE = ‘Asia/S">
-<meta property="og:updated_time" content="2017-05-23T17:29:27.151Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2017-5-21 django-web框架">
-<meta name="twitter:description" content="搭建的操作命令…1.创建项目django-admin startproject 项目名称2.添加应用python manage.py startapp bootest3.在settings.py的配置文件里安装应用在 INSTALLED_APPS(,,’booktest’)4.同时需要将里面的语言切换为中文即 LANGUAGE_CODE = ‘zh-Hans’TIME_ZONE = ‘Asia/S">
+<meta name="twitter:title" content="Hexo">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,80 +149,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-django-web框架" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      2017-5-21 django-web框架
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/06/12/爬虫/" class="archive-article-date">
+  	<time datetime="2017-06-11T17:01:22.835Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-12</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/06/12/爬虫/">小书匠编辑器使用手册</a>
     </h1>
   
 
-        
-        <a href="/2017/05/21/django-web框架/" class="archive-article-date">
-  	<time datetime="2017-05-21T05:54:13.015Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="搭建的操作命令"><a href="#搭建的操作命令" class="headerlink" title="搭建的操作命令"></a>搭建的操作命令</h3><p>…<br>1.创建项目<br>django-admin startproject 项目名称<br>2.添加应用<br>python manage.py startapp bootest<br>3.在settings.py的配置文件里安装应用<br>在 INSTALLED_APPS(,,’booktest’)<br>4.同时需要将里面的语言切换为中文<br>即 LANGUAGE_CODE = ‘zh-Hans’<br>TIME_ZONE = ‘Asia/Shanghai’<br>5.启动简单的开发django的Web服务器<br>python mange.py runserver<br>6.指定数据库额，如果没定义数据库，就会默认使用项目目录下面的sqlite3的数据库<br>DATABASES = {<br>    ‘default’: {<br>        ‘ENGINE’: ‘django.db.backends.mysql’,<br>        ‘NAME’: ‘db_test’,<br>        ‘USER’: ‘root’,<br>        ‘PASSWORD’: ‘mysql’,<br>        ‘HOST’: ‘localhost’,<br>        ‘PORT’: ‘3306’,<br>    }<br>}<br>6，在booktest文件夹下面的models文件里面创建类定义模型，也就是数据库里面的表<br>模型类是Python面向对象的程序，Python语言面向对象的程序一切皆对象，通过ORM的系统建立程序对象和数据库的映射关系，主要实现程序对象到关系数据库数据的对象映射。用python的程序语言直接操作数据库，避免了复杂的SQL语句，缺点是牺牲性能的，<br>7.创建好模型后，将文件迁移，将文件迁移为创建表的语句，<br>分为两步，一，生成迁移文件，python manage.py makemigrations<br>二， 执行迁移文件，python manage.py migrate</p>
-<p>7,定义视图文件，在booktestm目录下views文件里定义，<br>.视图就是一个python函数，被定义在views.py的文件里.<br>.视图的第一个参数就是HttpReuest类型的对象的request,包含了所有的请求信息，<br>.视图必须返回HttpReuest对象，包含返回给响应者的所有信息。<br>调用模板分为三步骤都封装在render的函数里面的<br>1.找到模板<br>2.定义上下文<br>3.渲染模板<br>4.视图调用模板都要执行以上三部分，于是Django提供了一个函数render封装了以上代码<br>方法render包含3个参数<br>第一个参数为request对象<br>第二个参数为模板文件路径<br>第三个参数为字典，表示向模板中传递的上下文数据<br>打开booktst/views.py文件，调用render的代码如下</p>
-<p>#coding:utf-8</p>
-<p>from django.shortcuts import render</p>
-<p>def index(request):<br>    context={‘title’:’图书列表’,’list’:range(10)}<br>    return render(request,’booktest/index.html’,context)</p>
-<p>8.视图定义好后，就可以配置URLconf<br>.请求者在浏览器的地址栏输入url,请求到网站后，获取url的信息,然后配置好路径逐条匹配，<br>如果匹配成功就调用相应的视图，<br>一条URLconf包括url规则、视图两部分<br>url规则使用正则表达式定义<br>视图就是在views.py中定义的视图<br>需要两步完成URLconf配置<br>1.在应用中定义URLconf<br>2.包含到项目的URLconf中</p>
-<p>9.在浏览器地址栏输入地址请求访问。<br>…</p>
-<h3 id="查询集"><a href="#查询集" class="headerlink" title="查询集"></a>查询集</h3><h5 id="查询集的两大特性：一，惰性执行：创建查询集不会访问数据库，知道调用数据库是才会访问数据库的，调用数据的情况包括迭代、序列化、与if合用"><a href="#查询集的两大特性：一，惰性执行：创建查询集不会访问数据库，知道调用数据库是才会访问数据库的，调用数据的情况包括迭代、序列化、与if合用" class="headerlink" title="查询集的两大特性：一，惰性执行：创建查询集不会访问数据库，知道调用数据库是才会访问数据库的，调用数据的情况包括迭代、序列化、与if合用"></a>查询集的两大特性：一，惰性执行：创建查询集不会访问数据库，知道调用数据库是才会访问数据库的，调用数据的情况包括迭代、序列化、与if合用</h5><h5 id="缓存查询集的结果会被缓存的。"><a href="#缓存查询集的结果会被缓存的。" class="headerlink" title="缓存查询集的结果会被缓存的。"></a>缓存查询集的结果会被缓存的。</h5><h5 id="返回列表的过滤器如下"><a href="#返回列表的过滤器如下" class="headerlink" title="返回列表的过滤器如下"></a>返回列表的过滤器如下</h5><p>all()：返回所有的数据<br>filter():返回满足条件的数据<br>excude():返回满足条件之外的数据<br>order_by():排序</p>
-<h5 id="返回单个的过滤器如下"><a href="#返回单个的过滤器如下" class="headerlink" title="返回单个的过滤器如下"></a>返回单个的过滤器如下</h5><p>get(): 获取单个满足条件的对象，未找到或找到多条都会报异常的。。<br>count():返回当前查询的总数<br>aggregate():聚合<br>exists():判断查询集中是否有数据，如果有则返回Ture,没有则返回Fasle;</p>
-<ul>
-<li>范围查询filter(id__in=[1,2,3])</li>
-<li>比较运算符的filter(id__gt=3)id大于三的对象</li>
-<li>gte,大于或等于，gt,大于，lt小于,lte,小于或等于</li>
-<li>模糊查询的filter（btitle__contains=”传”）查询包含传的对象</li>
-<li>startswith,对象以什么开头，结尾endswith,</li>
-<li>逻辑运算符Q,同sql语句中的where和and的关键字</li>
-<li>from django.db.models import Q 中导入过来，之后，booklist= BookInfo.books.filter(Q(bread_gt=20) | Q(bcommet_lt=30))查询阅读量大于而是或订阅量小于三十的书</li>
-<li>可以用|和&amp;结合使用的，|表示或的关系，只有通过这种方式来实现的，而&amp;表示并的关系，但直接在filter（bread_gt=20,bread_lt=30）中更加简单的。</li>
-<li>Q对象也可以使用前结合~来使用表示not等同于excude()的用法，</li>
-<li>list= BookInfo.books.fliter(~Qid=3)编号不为三的图书。</li>
-</ul>
-<h4 id="聚合函数agrregate"><a href="#聚合函数agrregate" class="headerlink" title="聚合函数agrregate"></a>聚合函数agrregate</h4><p>使用aggregate过滤器调用聚合函数Avg,Count,MIn,Sum,被定义django.db.models之中的<br>查询书阅读量总数量，<br>from django.db.models import Sum<br>list = BookInfo.books.aggreate(Sum(‘bread’))</p>
-<p>使用count时一般不使用aggregate()过滤器<br>例：查询图书总数<br>list = BookInfo.books.count()</p>
-<h4 id="F对象的使用"><a href="#F对象的使用" class="headerlink" title="F对象的使用"></a>F对象的使用</h4><p>F对象通常是用在两个对象的属性及字段之间的常量值之间的比较from django.db.models import F列如查询阅读量评论量的书籍：boolist =  BookInfo.books.filter(bread<strong>gt=F(‘bcommet))<br>也可以通过算数运算；boolist=BookInfo.books.filter(bread</strong>gt=F(‘bcommet)*2)</p>
-<h4 id="关联查询"><a href="#关联查询" class="headerlink" title="关联查询"></a>关联查询</h4><p>查询英雄里面内容含有八的图书<br>booklist = Bookinfo.books..filter(heroinfo<strong>hcontent</strong>contains=”八”)<br>查询天龙八部里的英雄的<br>booklist = Heroinfo.books.filter(bookinfo__btitle=”天龙八部”)</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -239,89 +190,84 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/05/21/django-web框架/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
   
-<nav id="article-nav">
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/06/02/天天生鲜/" class="archive-article-date">
+  	<time datetime="2017-06-02T10:21:34.699Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-02</time>
+</a>
+        </div>
+    	 
   
-  
-    <a href="/2017/05/16/python的知识点/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">2017-5-6python知识点。</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-
-
-
-  
-  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/06/02/天天生鲜/">2017-6-2天天生鲜</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">项目</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/06/02/abc/" class="archive-article-date">
+  	<time datetime="2017-06-02T10:16:58.059Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-02</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/06/02/abc/">Hello World</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
   
+  
+    </div></section>
+  
+
+    
 
 
           </div>
@@ -344,8 +290,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
@@ -413,11 +359,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">新建,模板,小书匠</a>
+                <a href="javascript:void(0)" class="js-tag color4">小书匠,使用手册</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小书匠,使用手册</a>
+                <a href="javascript:void(0)" class="js-tag color3">项目</a>
               </li>
             
             <div class="clearfix"></div>

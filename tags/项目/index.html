@@ -6,19 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>2017-5-6python知识点。 | Hexo</title>
+  <title>Tag: 项目 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="python的工厂模式…如果用类来创建简单的工厂模式，是根据类的继承的原理，可以将一个类的相同属性和方法，用父类封装起来，不同的地方父类可以定义一个方法，但不执行只是占一个位置，而是通过子类的重写去创创建子类所需要的功能，父类就相当一个简单工厂模型，而具体的创造是在子类里面完成的，例如，， … 定义一个基本的4S店类class CarStore(object): #仅仅是定义了有这个方法，并没有实">
-<meta name="keywords" content="新建,模板,小书匠">
-<meta property="og:type" content="article">
-<meta property="og:title" content="2017-5-6python知识点。">
-<meta property="og:url" content="http://yoursite.com/2017/05/16/python的知识点/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/tags/项目/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="python的工厂模式…如果用类来创建简单的工厂模式，是根据类的继承的原理，可以将一个类的相同属性和方法，用父类封装起来，不同的地方父类可以定义一个方法，但不执行只是占一个位置，而是通过子类的重写去创创建子类所需要的功能，父类就相当一个简单工厂模型，而具体的创造是在子类里面完成的，例如，， … 定义一个基本的4S店类class CarStore(object): #仅仅是定义了有这个方法，并没有实">
-<meta property="og:updated_time" content="2017-05-22T17:59:58.946Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2017-5-6python知识点。">
-<meta name="twitter:description" content="python的工厂模式…如果用类来创建简单的工厂模式，是根据类的继承的原理，可以将一个类的相同属性和方法，用父类封装起来，不同的地方父类可以定义一个方法，但不执行只是占一个位置，而是通过子类的重写去创创建子类所需要的功能，父类就相当一个简单工厂模型，而具体的创造是在子类里面完成的，例如，， … 定义一个基本的4S店类class CarStore(object): #仅仅是定义了有这个方法，并没有实">
+<meta name="twitter:title" content="Hexo">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,221 +149,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-python的知识点" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      2017-5-6python知识点。
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/06/02/天天生鲜/" class="archive-article-date">
+  	<time datetime="2017-06-02T10:21:34.699Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-02</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/06/02/天天生鲜/">2017-6-2天天生鲜</a>
     </h1>
   
 
-        
-        <a href="/2017/05/16/python的知识点/" class="archive-article-date">
-  	<time datetime="2017-05-16T06:10:12.262Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="python的工厂模式"><a href="#python的工厂模式" class="headerlink" title="python的工厂模式"></a>python的工厂模式</h2><p>…<br>如果用类来创建简单的工厂模式，是根据类的继承的原理，可以将一个类的相同属性和方法，用<br>父类封装起来，不同的地方父类可以定义一个方法，但不执行只是占一个位置，而是通过子类的重写去创创建子类所需要的功能，父类就相当一个简单工厂模型，而具体的创造是在子类里面完成的，例如，，</p>
-<p>…</p>
-<h5 id="定义一个基本的4S店类"><a href="#定义一个基本的4S店类" class="headerlink" title="定义一个基本的4S店类"></a>定义一个基本的4S店类</h5><p>class CarStore(object):</p>
-<pre><code>#仅仅是定义了有这个方法，并没有实现，具体功能，这个需要在子类中实现
-def createCar(self, typeName):
-    pass
-
-def order(self, typeName):
-    # 让工厂根据类型，生产一辆汽车
-    self.car = self.createCar(typeName)
-    self.car.move()
-    self.car.stop()
-</code></pre><h5 id="定义一个北京现代4S店类"><a href="#定义一个北京现代4S店类" class="headerlink" title="定义一个北京现代4S店类"></a>定义一个北京现代4S店类</h5><pre><code>class XiandaiCarStore(CarStore):
-
-    def createCar(self, typeName):
-        self.carFactory = CarFactory()
-        return self.carFactory.createCar(typeName)
-</code></pre><h5 id="定义伊兰特车类"><a href="#定义伊兰特车类" class="headerlink" title="定义伊兰特车类"></a>定义伊兰特车类</h5><p>class YilanteCar(object):</p>
-<pre><code># 定义车的方法
-def move(self):
-    print(&quot;---车在移动---&quot;)
-
-def stop(self):
-    print(&quot;---停车---&quot;)
-</code></pre><h5 id="定义索纳塔车类"><a href="#定义索纳塔车类" class="headerlink" title="定义索纳塔车类"></a>定义索纳塔车类</h5><p>class SuonataCar(object):</p>
-<pre><code># 定义车的方法
-def move(self):
-    print(&quot;---车在移动---&quot;)
-
-def stop(self):
-    print(&quot;---停车---&quot;)
-</code></pre><h5 id="定义一个生产汽车的工厂，让其根据具体得订单生产车"><a href="#定义一个生产汽车的工厂，让其根据具体得订单生产车" class="headerlink" title="定义一个生产汽车的工厂，让其根据具体得订单生产车"></a>定义一个生产汽车的工厂，让其根据具体得订单生产车</h5><p>class CarFactory(object):</p>
-<pre><code>def createCar(self,typeName):
-    self.typeName = typeName
-    if self.typeName == &quot;伊兰特&quot;:
-        self.car = YilanteCar()
-    elif self.typeName == &quot;索纳塔&quot;:
-        self.car = SuonataCar()
-
-    return self.car
-</code></pre><p>suonata = XiandaiCarStore()<br>suonata.order(“索纳塔”)</p>
-<h5 id="同样也可用函数的嵌入调用去完成的。"><a href="#同样也可用函数的嵌入调用去完成的。" class="headerlink" title="同样也可用函数的嵌入调用去完成的。"></a>同样也可用函数的嵌入调用去完成的。</h5><p>…</p>
-<h1 id="new方法"><a href="#new方法" class="headerlink" title="new方法"></a><strong>new</strong>方法</h1><h5 id="new方法的简单慨述-class-A-object"><a href="#new方法的简单慨述-class-A-object" class="headerlink" title="new方法的简单慨述 class A(object):"></a>new方法的简单慨述 class A(object):</h5><p>  2     # 此时init方法做一些初始化的更能<br>  3     def <strong>init</strong>(self):<br>  4         print(id(self))<br>  5         print(“这是init方法”)<br>  6     # 此时的cls是类方法的膜版,因为new方法要在init方法之前生成一个对象<br>  7     def <strong>new</strong>(cls):<br>  8         print(id(id))<br>  9<br> 10         print(“这是new方法”)<br> 11         ‘’’  当调用new方法的时候，需要生成一个A类的实例对象，而A类的<strong>new</strong>方法<br>                  不具备生成一个实例对象的更能，所以子类就会去父类里面找，所以就通过调用父类<br>                 的new方法来生成一个实例对象，而此时需要将A模板作为参数传输到父类的new方法<br>                 中，生成一个对象之后，会方会给init的方法做一些初始化功能的，</p>
-<p> 14         return object._new__(cls)<br> 15<br> 16 print(id(A))<br> 17 dog = A()</p>
-<h4 id="new是ong在单列模式中可以被用到的，单例模式即只生成一个实例对象的类，，，"><a href="#new是ong在单列模式中可以被用到的，单例模式即只生成一个实例对象的类，，，" class="headerlink" title="new是ong在单列模式中可以被用到的，单例模式即只生成一个实例对象的类，，，"></a><strong>new</strong>是ong在单列模式中可以被用到的，单例模式即只生成一个实例对象的类，，，</h4><h1 id="异常的一些常规操作"><a href="#异常的一些常规操作" class="headerlink" title="异常的一些常规操作"></a>异常的一些常规操作</h1><ul>
-<li>异常的捕捉<br>异常指的是一段程序出现错误，就会产生错误提示，阻止程序的整体的运行，因此可以用到<br>try来捕捉异常，并作出处理，这样即使出现异常也不会影响整体的操作，只会在局部异常后面的<br>形成阻塞，同时也可以做一个局部的检测，<br>except Exception as result:<br>  return (“捕捉到的异常%s” %result)<br>else:<br>  (“没有捕捉异常”)<br>finally:<br>  不管没有异常都要操作的，</li>
-</ul>
-<h1 id="抛出自定义的异常"><a href="#抛出自定义的异常" class="headerlink" title="抛出自定义的异常"></a>抛出自定义的异常</h1><p>你可以用raise语句来引发一个异常。异常/错误对象必须有一个名字，且它们应是Error或Exception类的子类</p>
-<p>下面是一个引发异常的例子:</p>
-<p>class ShortInputException(Exception):<br>    ‘’’自定义的异常类’’’<br>    def <strong>init</strong>(self, length, atleast):</p>
-<pre><code>#super().__init__()
-self.length = length
-self.atleast = atleast
-</code></pre><p>def main():<br>    try:<br>        s = input(‘请输入 –&gt; ‘)<br>        if len(s) &lt; 3:</p>
-<pre><code>        # raise引发一个你定义的异常
-        raise ShortInputException(len(s), 3)
-except ShortInputException as result:#x这个变量被绑定到了错误的实例
-    print(&apos;ShortInputException: 输入的长度是 %d,长度至少应是 %d&apos;% (result.length, result.atleast))
-else:
-    print(&apos;没有异常发生.&apos;)
-</code></pre><p>raise 抛出异常，在记载异常信息可以用到的，<br>自定义异常就是，用Exception为父类创建一个类就是一个异常的类，定义一个对象就是一个异常，而异常的名字就是类名的。。直接用raise抛出。。。<br>非定义异常如果直接抛出，只需raise就行了。。。。</p>
-<h1 id="模块中的方法"><a href="#模块中的方法" class="headerlink" title="模块中的方法"></a>模块中的方法</h1><p><strong>name</strong> 如果是自己打开这个文件，name就等于<strong>main</strong>，如果是别人导包的话，等于文件名的前缀，<br><strong>all</strong> 用于from XX import * 的时候的 一些限定操作的，<strong>all</strong> = [“test”,”port”]<br>只导入了 中括号里面的。</p>
-<h3 id="字符串的操作"><a href="#字符串的操作" class="headerlink" title="字符串的操作"></a>字符串的操作</h3><p>##### </p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">新建,模板,小书匠</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">项目</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/05/16/python的知识点/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/05/21/django-web框架/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          2017-5-21 django-web框架
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/05/09/数据库的操作/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">2017-5-6数据库个人的归纳</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
+    
 
 
           </div>
@@ -391,9 +225,9 @@ else:
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
@@ -460,11 +294,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">新建,模板,小书匠</a>
+                <a href="javascript:void(0)" class="js-tag color4">小书匠,使用手册</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小书匠,使用手册</a>
+                <a href="javascript:void(0)" class="js-tag color3">项目</a>
               </li>
             
             <div class="clearfix"></div>
